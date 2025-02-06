@@ -1,0 +1,163 @@
+/* Основной модальный контейнер */
+.modal {
+     z-index: 1000;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Анимация плавного появления */
+@keyframes fadeIn {
+     from {
+          opacity: 0;
+     }
+
+     to {
+          opacity: 1;
+     }
+}
+
+/* Модальное содержимое (уменьшено) */
+.modal-content {
+     background: #fff;
+     padding: 15px;
+     border-radius: 8px;
+     width: 85%;
+     max-width: 320px;
+     /* Было 400px */
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+     animation: slideUp 0.3s ease;
+     position: relative;
+}
+
+/* Анимация для модального окна */
+@keyframes slideUp {
+     from {
+          transform: translateY(20px);
+          opacity: 0;
+     }
+
+     to {
+          transform: translateY(0);
+          opacity: 1;
+     }
+}
+
+/* Кнопка закрытия */
+.close {
+     position: absolute;
+     top: 4px;
+     right: 4px;
+     font-size: 18px;
+     /* Было 20px */
+     color: #888;
+     border: none;
+     background: none;
+     cursor: pointer;
+}
+
+.close:hover {
+     color: #000;
+}
+
+/* Форма (уменьшены отступы) */
+.form {
+     display: flex;
+     flex-direction: column;
+     gap: 8px;
+     /* Было 10px */
+}
+
+/* Поля ввода (уменьшены) */
+.form input {
+     width: 100%;
+     padding: 8px;
+     /* Было 10px */
+     border: 1px solid #ddd;
+     border-radius: 6px;
+     font-size: 13px;
+     /* Было 14px */
+     outline: none;
+     transition: border 0.3s;
+}
+
+.form input:focus {
+     border-color: #b08e72;
+}
+
+/* Кнопка отправки (уменьшена) */
+.form button {
+     padding: 8px 12px;
+     /* Было 10px 15px */
+     background: #242627;
+     color: #fff;
+     font-size: 14px;
+     /* Было 16px */
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+     transition: background 0.3s ease;
+}
+
+.form button:hover {
+     background: #161818;
+}
+
+/* Чекбоксы */
+.checkbox-group {
+     display: flex;
+     flex-direction: column;
+     gap: 1px;
+     margin-top: 8px;
+}
+
+
+.checkbox-group label {
+     display: flex;
+     align-items: center;
+     gap: 1px;
+     /* Было 8px */
+     font-size: 13px;
+     /* Было 14px */
+     cursor: pointer;
+     color: #222;
+}
+
+.checkbox-group input {
+     width: 14px;
+     height: 14px;
+     cursor: pointer;
+     accent-color: black;
+     /* Черный цвет */
+}
+/* Адаптивность */
+@media (max-width: 480px) {
+     .modal-content {
+          width: 90%;
+          max-width: 280px;
+          /* Было 300px */
+          padding: 12px;
+     }
+
+     .form input {
+          font-size: 12px;
+          padding: 6px;
+     }
+
+     .form button {
+          font-size: 12px;
+          padding: 6px 10px;
+     }
+
+     .close {
+          font-size: 16px;
+          top: 3px;
+          right: 3px;
+     }
+}
