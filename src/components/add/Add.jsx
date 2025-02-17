@@ -59,7 +59,7 @@ const Add = ({ onClose }) => {
                          <input type="text" placeholder="Адрес" {...register("manzil", { required: true })} />
                          <input type="text" placeholder="Информация" {...register("malumoti", { required: true })} />
                          <input type="number" placeholder="Цена" {...register("narxi", { required: true })} />
-                         <input type="text" placeholder="Локация" {...register("joylashuv", { required: true })} />
+                         <input type="text" placeholder="Кординаты" {...register("joylashuv", { required: true })} />
 
 
                          {/* Бир нечта тасвир URL'лари учун динамик майдонлар */}

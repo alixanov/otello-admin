@@ -102,6 +102,7 @@ const Card = () => {
                               </div>
                               <h3><strong>Адрес:</strong> {item.manzil}</h3>
                               <h4><strong>Информация:</strong> {item.malumoti}</h4>
+                              <span><strong>Кординаты:</strong> {item.joylashuv} $</span>
                               <span><strong>Цена:</strong> {item.narxi} $</span>
 
                               <div className="features">
@@ -146,7 +147,7 @@ const Card = () => {
                                    <input type="text" name="manzil" placeholder='Адрес' defaultValue={editProduct?.manzil || ''} />
                                    <input type="text" name="malumoti" placeholder="Информация" defaultValue={editProduct?.malumoti || ''} />
                                    <input type="number" name="narxi" placeholder='Цена' defaultValue={editProduct?.narxi || ''} />
-                                   <input type="text" name="joylashuv" placeholder='Локация' defaultValue={editProduct?.joylashuv || ''} />
+                                   <input type="text" name="joylashuv" placeholder='Кординаты' defaultValue={editProduct?.joylashuv || ''} />
 
 
                                    <div className="checkbox-group">
