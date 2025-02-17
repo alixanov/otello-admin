@@ -64,6 +64,7 @@ const Card = () => {
                malumoti: e.target.malumoti.value,
                manzil: e.target.manzil.value,
                narxi: e.target.narxi.value,
+               joylashuv:e.target.joylashuv.value,
                wifi: e.target.wifi.checked,
                parking: e.target.parking.checked,
                breakfast: e.target.breakfast.checked,
@@ -145,6 +146,8 @@ const Card = () => {
                                    <input type="text" name="manzil" placeholder='Адрес' defaultValue={editProduct?.manzil || ''} />
                                    <input type="text" name="malumoti" placeholder="Информация" defaultValue={editProduct?.malumoti || ''} />
                                    <input type="number" name="narxi" placeholder='Цена' defaultValue={editProduct?.narxi || ''} />
+                                   <input type="text" name="joylashuv" placeholder='Локация' defaultValue={editProduct?.joylashuv || ''} />
+
 
                                    <div className="checkbox-group">
                                         <label>
