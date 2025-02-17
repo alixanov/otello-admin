@@ -102,7 +102,7 @@ const Card = () => {
                               </div>
                               <h3><strong>Адрес:</strong> {item.manzil}</h3>
                               <h4><strong>Информация:</strong> {item.malumoti}</h4>
-                              <span><strong>Кординаты:</strong> {item.joylashuv} $</span>
+                              <span><strong>Кординаты:</strong> {item.joylashuv} </span>
                               <span><strong>Цена:</strong> {item.narxi} $</span>
 
                               <div className="features">
